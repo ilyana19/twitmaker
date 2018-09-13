@@ -15,6 +15,7 @@ class TweetsController < ApplicationController
           format.html do
             render partial: "tweet", locals: {tweet: @tweet}
           end
+          format.json {render json: @tweet}
         end
       end
     else
